@@ -27,13 +27,13 @@ lambda function that interacts with AppSync
 #
 # An example mutation named "CreateUser" might look like:
 #
-  mutation createUser {
-       createUser(id: 123,  firstname:"Morifeoluwa", lastname: "Jebutu", email: "jmorife@yahoo.com", age: "24") {
-         firstname
+    mutation createUser {
+        createUser(id: 123,  firstname:"Morifeoluwa", lastname: "Jebutu",       email: "jmorife@yahoo.com", age: "24") {
+            firstname
      		lastname
      		email
      		age
-       }
+        }
     }
 
 #
