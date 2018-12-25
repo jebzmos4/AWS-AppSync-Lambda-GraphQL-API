@@ -40,6 +40,7 @@ exports.lambdaHandler =  (event, context, callback) => {
                     console.error("Unable to fetch user records. Error JSON:", JSON.stringify(err, null, 2));
                 } else {
                     let results = data.Items;
+                    console.log(data.Items);
                     callback(null, results);
                 }
             });
@@ -130,13 +131,13 @@ exports.lambdaHandler =  (event, context, callback) => {
                 }
             });
             break;
-        case "deleteArticle":
+        case "deleteUser":
             dynamo.delete(deleteParams, function(err, data) {
                 if (err) {
                     console.error("Unable to delete user from DB. Error JSON:", JSON.stringify(err, null, 2));
                 } else {
-                    console.log("Successfully DeleteItem succeeded:", JSON.stringify(data, null, 2));
-                    let result = true;
+                    console.log("Successfully deleted user:", JSON.stringify(data, null, 2));
+                    let result = {'firstname': "successfully deleted user"}
                     callback(null, result)
                 }
             });
