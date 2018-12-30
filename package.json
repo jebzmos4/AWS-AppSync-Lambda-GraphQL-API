@@ -1,0 +1,17 @@
+{
+  "name": "my-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest *.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk-mock": "^4.3.0",
+    "bluebird": "^3.5.3",
+    "dotenv": "^6.2.0",
+    "jest": "^23.6.0"
+  }
+}
